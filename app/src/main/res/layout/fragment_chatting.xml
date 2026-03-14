@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.chatfragment.chatting.ChattingFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/bg_chat"
+    android:id="@+id/top_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/btn_back"
+        android:src="@drawable/ic_back_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        android:id="@+id/img_profile"
+        android:src="@drawable/ic_prof2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/img_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_profile"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/main_color"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Касым Артыков"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginTop="11dp"
+            android:textSize="16sp"
+            android:text="Был(а) в сети в 12:32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/top_container"
+        app:layout_constraintBottom_toTopOf="@id/cont_send"
+        android:id="@+id/rvMasseges"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <LinearLayout
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="16dp"
+        android:id="@+id/cont_send"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cam_blue"
+            android:layout_width="40dp"
+            android:layout_height="50dp"/>
+        <EditText
+            android:layout_marginHorizontal="10dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_send_msg"
+            android:textSize="20sp"
+            android:hint="Сообщение"
+            android:id="@+id/et_field_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+        <ImageView
+            android:src="@drawable/ic_send_msg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

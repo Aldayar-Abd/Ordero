@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MessageBubbleLayout">
+        <attr name="bubbleColor" format="color"/>
+        <attr name="bubbleCornerRadius" format="dimension"/>
+        <attr name="bubbleCutRadius" format="dimension"/>
+    </declare-styleable>
+</resources>

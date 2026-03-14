@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.byd.ordero2.ui.fragments.mainfragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.byd.ordero2.ui.fragments.chartfragment.ChartFragment"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart" />
+    <fragment
+            android:id="@+id/profileFragment"
+        android:name="com.byd.ordero2.ui.fragments.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.byd.ordero2.ui.fragments.chatfragment.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_chattingFragment"
+            app:destination="@id/chattingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingFragment"
+        android:name="com.byd.ordero2.ui.fragments.chatfragment.chatting.ChattingFragment"
+        android:label="fragment_chatting"
+        tools:layout="@layout/fragment_chatting" />
+    <fragment
+        android:id="@+id/activeProductsFragment"
+        android:name="com.byd.ordero2.ui.fragments.activeProductsFragment.ActiveProductsFragment"
+        android:label="fragment_active_products"
+        tools:layout="@layout/fragment_active_products" />
+    <fragment
+        android:id="@+id/orderDetFragment"
+        android:name="com.byd.ordero2.ui.fragments.ordersFragment.ordersDet.OrderDetFragment"
+        android:label="fragment_order_det"
+        tools:layout="@layout/fragment_order_det" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.byd.ordero2.ui.fragments.ordersFragment.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/productDetFragment"
+        android:name="com.byd.ordero2.ui.fragments.productDet.ProductDetFragment"
+        android:label="fragment_product_det"
+        tools:layout="@layout/fragment_product_det" />
+    <fragment
+        android:id="@+id/productChartFragment"
+        android:name="com.byd.ordero2.ui.fragments.productChart.ProductChartFragment"
+        android:label="fragment_product_chart"
+        tools:layout="@layout/fragment_product_chart" />
+</navigation>
