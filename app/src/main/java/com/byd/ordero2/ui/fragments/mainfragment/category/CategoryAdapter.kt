@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.byd.ordero2.R
 
 class CategoryAdapter(
-    private val items: List<CategoryItem>
+    private val items: List<CategoryItem>,
+    private val onClick: (CategoryItem) -> Unit
 ) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
     class CategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -36,6 +37,10 @@ class CategoryAdapter(
         )
 
         holder.textView.background = drawable
+
+        holder.itemView.setOnClickListener {
+            onClick(item)
+        }
     }
 
     override fun getItemCount(): Int = items.size

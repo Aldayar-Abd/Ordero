@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/size_cont"
@@ -33,7 +33,7 @@
             android:columnCount="5">
 
             <!-- Один item -->
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="6dp"
@@ -48,9 +48,9 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="6dp"
@@ -65,8 +65,8 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_margin="6dp"
@@ -81,8 +81,8 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="6dp"
@@ -97,8 +97,8 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="6dp"
@@ -113,8 +113,8 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="6dp"
@@ -129,8 +129,8 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_margin="6dp"
@@ -145,8 +145,8 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="6dp"
@@ -161,8 +161,8 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_margin="6dp"
@@ -177,8 +177,8 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="6dp"
@@ -193,11 +193,12 @@
                     android:gravity="center"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
         </GridLayout>
     </LinearLayout>
 
     <TextView
+        android:layout_marginTop="16dp"
         android:id="@+id/txt_colors"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/size_cont"
@@ -226,7 +227,7 @@
         android:id="@+id/txt_count"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rvColors"
-        android:text="Выберите коль-во:"
+        android:text="Выберите количество:"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:layout_marginTop="10dp"
@@ -235,19 +236,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        app:layout_goneMarginBottom="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginHorizontal="16dp"
-        android:id="@+id/rvSelectCount"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        app:layout_constraintTop_toBottomOf="@id/txt_count"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSelectCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@+id/btn_confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_count"
+            app:layout_goneMarginBottom="40dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_confirm"
