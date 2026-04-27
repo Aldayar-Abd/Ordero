@@ -73,21 +73,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Fashion home"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_name_shop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_name_shop"
+            app:cardCornerRadius="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp">
             <ImageView
-                android:layout_marginEnd="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/txt_name_shop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/txt_name_shop"
+                android:scaleType="centerCrop"
                 android:id="@+id/img_profile"
-                android:layout_marginStart="4dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_prof1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 </androidx.cardview.widget.CardView>

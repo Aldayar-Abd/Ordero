@@ -90,7 +90,7 @@
                 <TextView
                     android:textSize="14sp"
                     android:textColor="@color/gray"
-                    android:text="Выбранное коль-во:"
+                    android:text="Выбранное кол-во:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
@@ -118,21 +118,30 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <ImageView
-            android:layout_marginBottom="10dp"
-            android:id="@+id/img_shop_prof"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_prof1"
-            android:elevation="20dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_holder2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:cardCornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/top_container"
-            />
+            android:layout_marginBottom="10dp"
+            >
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/img_shop_prof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_prof1"
+                android:elevation="20dp"/>
+        </androidx.cardview.widget.CardView>
+
         <TextView
+            android:id="@+id/txt_name_shop"
             android:layout_marginStart="6dp"
-            app:layout_constraintTop_toTopOf="@id/img_shop_prof"
-            app:layout_constraintBottom_toBottomOf="@id/img_shop_prof"
-            app:layout_constraintStart_toEndOf="@id/img_shop_prof"
+            app:layout_constraintTop_toTopOf="@id/img_holder2"
+            app:layout_constraintBottom_toBottomOf="@id/img_holder2"
+            app:layout_constraintStart_toEndOf="@id/img_holder2"
             android:text="Fashion home"
             android:textSize="10sp"
             android:textColor="@color/gray"

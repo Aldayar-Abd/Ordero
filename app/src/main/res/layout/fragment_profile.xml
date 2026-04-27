@@ -44,7 +44,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/img"/>
+                        android:src="@drawable/ic_prof_woman"/>
                 </androidx.cardview.widget.CardView>
 
                 <LinearLayout
@@ -280,6 +280,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:shapeAppearance="@style/fab_3_rounded"
         android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

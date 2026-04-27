@@ -1,6 +1,5 @@
 package com.byd.ordero2.ui.fragments.activeProductsFragment
 
-import android.widget.GridLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import com.byd.ordero2.R
 import com.byd.ordero2.databinding.FragmentActiveProductsBinding
@@ -23,84 +22,122 @@ class ActiveProductsFragment : BaseFragment<FragmentActiveProductsBinding>(
         val activeProducts = listOf(
             ActiveProductsItem(
                 id = 1,
-                nameProduct = "Футболка из хлопка",
-                nameShop = "Fashion home",
+                nameProduct = "Футболка",
+                nameShop = "Fashion Home",
                 price = "350 c",
                 imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
-                isFavorite = true
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
+            ),
+            ActiveProductsItem(
+                id = 1,
+                nameProduct = "Футболка Oversize",
+                nameShop = "Fashion Home",
+                price = "350 c",
+                imageProduct = R.drawable.ic_oversize,
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
             ),
             ActiveProductsItem(
                 id = 2,
-                nameProduct = "Спортивные кроссовки",
-                nameShop = "Sport line",
-                price = "1200 c",
-                imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
+                nameProduct = "Худи Street",
+                nameShop = "Fashion Home",
+                price = "520 c",
+                imageProduct = R.drawable.ic_clow,
+                imageProfile = R.drawable.ic_prof1,
                 isFavorite = false
             ),
             ActiveProductsItem(
                 id = 3,
-                nameProduct = "Куртка зимняя",
-                nameShop = "Winter style",
-                price = "2400 c",
-                imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
-                isFavorite = true
+                nameProduct = "Лонгслив Basic",
+                nameShop = "Fashion Home",
+                price = "270 c",
+                imageProduct = R.drawable.img_23,
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
             ),
             ActiveProductsItem(
                 id = 4,
-                nameProduct = "Рюкзак городской",
-                nameShop = "Urban shop",
+                nameProduct = "Куртка Winter",
+                nameShop = "Fashion Home",
                 price = "890 c",
-                imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
+                imageProduct = R.drawable.ic_cl2,
+                imageProfile = R.drawable.ic_prof1,
                 isFavorite = false
             ),
             ActiveProductsItem(
                 id = 5,
-                nameProduct = "Часы наручные",
-                nameShop = "Time store",
-                price = "1500 c",
-                imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
-                isFavorite = true
+                nameProduct = "Рубашка Classic",
+                nameShop = "Fashion Home",
+                price = "420 c",
+                imageProduct = R.drawable.ic_cl3,
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
+            ),
+
+            ActiveProductsItem(
+                id = 1,
+                nameProduct = "Спортивная футболка",
+                nameShop = "Fashion Home",
+                price = "1200 c",
+                imageProduct = R.drawable.img_9,
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
+            ),
+            ActiveProductsItem(
+                id = 2,
+                nameProduct = "Беговые кроссовки",
+                nameShop = "Fashion Home",
+                price = "2500 c",
+                imageProduct = R.drawable.img_10,
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
+            ),
+            ActiveProductsItem(
+                id = 3,
+                nameProduct = "Шорты спортивные",
+                nameShop = "Fashion Home",
+                price = "900 c",
+                imageProduct = R.drawable.img_11,
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
+            ),
+            ActiveProductsItem(
+                id = 4,
+                nameProduct = "Футбольная форма",
+                nameShop = "Fashion Home",
+                price = "3200 c",
+                imageProduct = R.drawable.img_12,
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
+            ),
+            ActiveProductsItem(
+                id = 5,
+                nameProduct = "Спортивный костюм",
+                nameShop = "Fashion Home",
+                price = "1800 c",
+                imageProduct = R.drawable.img_13,
+                imageProfile = R.drawable.ic_prof1,
+                isFavorite = false
             ),
             ActiveProductsItem(
                 id = 6,
-                nameProduct = "Наушники Bluetooth",
-                nameShop = "Tech market",
-                price = "2100 c",
-                imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
+                nameProduct = "Футбольные бутсы",
+                nameShop = "Fashion Home",
+                price = "4000 c",
+                imageProduct = R.drawable.img_14,
+                imageProfile = R.drawable.ic_prof1,
                 isFavorite = false
             ),
+
             ActiveProductsItem(
-                id = 7,
-                nameProduct = "Толстовка oversize",
-                nameShop = "Street wear",
-                price = "980 c",
-                imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
-                isFavorite = true
-            ),
-            ActiveProductsItem(
-                id = 8,
-                nameProduct = "Сумка через плечо",
-                nameShop = "Bag point",
-                price = "760 c",
-                imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
+                id = 101,
+                nameProduct = "Солнцезащитные очки",
+                nameShop = "Fashion Home",
+                price = "800 c",
+                imageProduct = R.drawable.img_15,
+                imageProfile = R.drawable.ic_prof1,
                 isFavorite = false
-            ),
-            ActiveProductsItem(
-                id = 9,
-                nameProduct = "Джинсы классические",
-                nameShop = "Denim style",
-                price = "1300 c",
-                imageProduct = R.drawable.prod,
-                imageProfile = R.drawable.img,
-                isFavorite = true
             )
         )
 

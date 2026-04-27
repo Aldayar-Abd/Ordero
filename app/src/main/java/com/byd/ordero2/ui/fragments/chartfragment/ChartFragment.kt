@@ -18,28 +18,55 @@ class ChartFragment : BaseFragment<FragmentChartBinding>(FragmentChartBinding::i
         val products = listOf(
             ChartItem(
                 id = 1,
-                R.drawable.prod,
-                name = "Футболка из хлопка",
-                color = "Белый",
-                selectedCount = "2000 шт",
-                isSelected = true
+                img = R.drawable.prod,
+                name = "Футболка",
+                color = "Красный",
+                selectedCount = "1000 шт",
+                isSelected = true,
+                imgShop = R.drawable.ic_prof1,
+                nameShop = "Fashion home"
             ),
             ChartItem(
-                id = 1,
-                R.drawable.prod,
-                name = "Футболка из хлопка",
-                color = "Белый",
-                selectedCount = "2000 шт",
-                isSelected = true
+                id = 2,
+                img = R.drawable.ic_clow,
+                name = "Худи Street",
+                color = "Черный",
+                selectedCount = "900 шт",
+                isSelected = true,
+                imgShop = R.drawable.ic_prof2,
+                nameShop = "Urban wear"
             ),
             ChartItem(
-                id = 1,
-                R.drawable.prod,
-                name = "Футболка из хлопка",
-                color = "Белый",
+                id = 3,
+                img = R.drawable.img_23,
+                name = "Лонгслив Basic",
+                color = "Серый",
                 selectedCount = "2000 шт",
-                isSelected = true
-            ))
+                isSelected = true,
+                imgShop = R.drawable.ic_clot1,
+                nameShop = "Basic store"
+            ),
+            ChartItem(
+                id = 4,
+                img = R.drawable.ic_cl2,
+                name = "Куртка Winter",
+                color = "Черный",
+                selectedCount = "500 шт",
+                isSelected = true,
+                imgShop = R.drawable.ic_prof_man4,
+                nameShop = "Winter shop"
+            ),
+            ChartItem(
+                id = 5,
+                img = R.drawable.img_10,
+                name = "Беговые кроссовки",
+                color = "Белый",
+                selectedCount = "800 шт",
+                isSelected = true,
+                imgShop = R.drawable.ic_sport1,
+                nameShop = "RunnerPro"
+            )
+        )
         adapter.submitList(products)
     }
     private fun initRv(){

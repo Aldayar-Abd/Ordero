@@ -23,6 +23,8 @@ class ChartAdapter: BaseAdapter<ChartItem, ItemProductsInChartBinding>(ChartDiff
         binding.txtName.text=item.name
         binding.txtColor.text=item.color
         binding.txtSelectedCount.text=item.selectedCount
+        binding.imgShopProf.setImageResource(item.imgShop)
+        binding.txtNameShop.text=item.nameShop
     }
 
     object ChartDiffCallback: DiffUtil.ItemCallback<ChartItem>() {

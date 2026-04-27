@@ -31,27 +31,27 @@ class OrdersFragment : BaseFragment<FragmentOrdersBinding>(FragmentOrdersBinding
             OrderItem(
                 id = 2,
                 fullName = "Наргиза Абдисаламова",
-                imageProfile = R.drawable.img
+                imageProfile = R.drawable.ic_prof_woman2
             ),
             OrderItem(
                 id = 3,
                 fullName = "Дарья Алексеева",
-                imageProfile = R.drawable.img
+                imageProfile = R.drawable.ic_woman6
             ),
             OrderItem(
                 id = 4,
                 fullName = "Актан Асанов",
-                imageProfile = R.drawable.img
+                imageProfile = R.drawable.ic_prof_man3
             ),
             OrderItem(
                 id = 5,
                 fullName = "Узур Ислам уулу",
-                imageProfile = R.drawable.img
+                imageProfile = R.drawable.ic_prof_man4
             ),
             OrderItem(
                 id = 6,
                 fullName = "Сергей Кузьмич",
-                imageProfile = R.drawable.img
+                imageProfile = R.drawable.ic_prof_man1
             ))
         adapter.submitList(orders)
     }

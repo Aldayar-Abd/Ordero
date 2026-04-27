@@ -6,5 +6,7 @@ data class ChartItem (
     var name: String,
     var color: String,
     var selectedCount: String,
-    var isSelected: Boolean
+    var isSelected: Boolean,
+    var imgShop: Int,
+    var nameShop: String,
 )

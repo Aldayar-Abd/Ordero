@@ -1,8 +1,5 @@
 package com.byd.ordero2.ui.fragments.mainfragment
 
-import android.graphics.Color
-import android.view.Gravity
-import android.widget.FrameLayout
 import androidx.core.os.bundleOf
 import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
@@ -14,12 +11,10 @@ import com.byd.ordero2.ui.fragments.mainfragment.category.CategoryAdapter
 import com.byd.ordero2.ui.fragments.mainfragment.category.CategoryItem
 import com.byd.ordero2.ui.fragments.mainfragment.products.Product
 import com.byd.ordero2.ui.fragments.mainfragment.products.ProductAdapter
-import com.byd.ordero2.ui.fragments.mainfragment.products.ProductItem
 import com.byd.ordero2.ui.fragments.productChart.Variant
 import com.byd.ordero2.ui.fragments.productDet.ProductDetItem
 import com.byd.ordero2.ui.utils.BaseFragment
 import com.byd.ordero2.ui.utils.HorizontalSpaceItemDecoration
-import com.google.android.material.snackbar.Snackbar
 
 class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
     private var filteredProducts = mutableListOf<Product>()
@@ -56,18 +51,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
         ),
         Product.Clothes(
             id = 1,
-            img = R.drawable.prod,
+            img = R.drawable.ic_oversize,
             price = 350,
             name = "Футболка Oversize",
             count = "1500",
             booked = "120",
             nameShop = "Fashion home",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_woman9,
             sizes = listOf("XS", "S", "M", "L"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.red_shirt, "Красный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Белый"),
-                ProductDetItem(3, R.drawable.black_shirt, "Черный")
+                ProductDetItem(1, R.drawable.ic_red, "Красный"),
+                ProductDetItem(2, R.drawable.ic_white, "Белый"),
+                ProductDetItem(3, R.drawable.ic_black, "Черный")
             ),
             variant = listOf(
                 Variant("XS", 1, 50),
@@ -79,17 +74,17 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Clothes(
             id = 2,
-            img = R.drawable.prod,
+            img = R.drawable.ic_clow,
             price = 520,
             name = "Худи Street",
             count = "900",
             booked = "80",
             nameShop = "Urban wear",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_prof2,
             sizes = listOf("S", "M", "L"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Черный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Белый")
+                ProductDetItem(1, R.drawable.ic_black, "Черный"),
+                ProductDetItem(2, R.drawable.ic_white, "Белый")
             ),
             variant = listOf(
                 Variant("S", 1, 40),
@@ -100,17 +95,17 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Clothes(
             id = 3,
-            img = R.drawable.prod,
+            img = R.drawable.img_23,
             price = 270,
             name = "Лонгслив Basic",
             count = "2000",
             booked = "300",
             nameShop = "Basic store",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_clot1,
             sizes = listOf("XS", "S", "M", "L"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.gray_shirt, "Серый"),
-                ProductDetItem(2, R.drawable.black_shirt, "Черный")
+                ProductDetItem(1, R.drawable.ic_grey, "Серый"),
+                ProductDetItem(2, R.drawable.ic_black, "Черный")
             ),
             variant = listOf(
                 Variant("XS", 1, 80),
@@ -122,18 +117,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Clothes(
             id = 4,
-            img = R.drawable.prod,
+            img = R.drawable.ic_cl2,
             price = 890,
             name = "Куртка Winter",
             count = "500",
             booked = "50",
             nameShop = "Winter shop",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_prof_man4,
             sizes = listOf("S","M", "L"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Черный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Белый"),
-                ProductDetItem(3, R.drawable.red_shirt, "Красный")
+                ProductDetItem(1, R.drawable.ic_black, "Черный"),
+                ProductDetItem(2, R.drawable.ic_white, "Белый"),
+                ProductDetItem(3, R.drawable.ic_red, "Красный")
             ),
             variant = listOf(
                 Variant("M", 1, 30),
@@ -144,18 +139,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Clothes(
             id = 5,
-            img = R.drawable.prod,
+            img = R.drawable.ic_cl3,
             price = 420,
             name = "Рубашка Classic",
             count = "1200",
             booked = "150",
             nameShop = "Classic wear",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_prof_woman2,
             sizes = listOf("S", "M", "L"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.white_shirt, "Белый"),
-                ProductDetItem(2, R.drawable.black_shirt, "Черный"),
-                ProductDetItem(3, R.drawable.gray_shirt, "Серый")
+                ProductDetItem(1, R.drawable.ic_white, "Белый"),
+                ProductDetItem(2, R.drawable.ic_black, "Черный"),
+                ProductDetItem(3, R.drawable.ic_grey, "Серый")
             ),
             variant = listOf(
                 Variant("S", 1, 60),
@@ -166,16 +161,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Medical(
             id = 2,
-            img = R.drawable.img_prod2,
+            img = R.drawable.ic_med1,
             price = 280,
             name = "Маска",
             count = "7000",
             booked = "10",
             nameShop = "Med shop",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_nurce1,
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Черный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Белый")
+                ProductDetItem(1, R.drawable.ic_black, "Черный"),
+                ProductDetItem(2, R.drawable.ic_white, "Белый")
             ),
             material = listOf("Марлевая"),
             variant = listOf(
@@ -184,16 +179,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
         ),
         Product.Medical(
             id = 6,
-            img = R.drawable.img_prod2,
+            img = R.drawable.ic_med,
             price = 120,
             name = "Медицинская маска",
             count = "10000",
             booked = "500",
             nameShop = "Med shop",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_nurce1,
             colors = listOf(
-                ProductDetItem(1, R.drawable.white_shirt, "Одноразовая"),
-                ProductDetItem(2, R.drawable.black_shirt, "Многоразовая")
+                ProductDetItem(1, R.drawable.ic_med, "Одноразовая"),
+                ProductDetItem(2, R.drawable.ic_med1, "Многоразовая")
             ),
             material = listOf("Нетканый материал", "Хлопок"),
             variant = listOf(
@@ -204,16 +199,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Medical(
             id = 7,
-            img = R.drawable.img_prod2,
+            img = R.drawable.img_22,
             price = 300,
             name = "Перчатки латексные",
             count = "8000",
             booked = "200",
             nameShop = "MedPro",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_nurce2,
             colors = listOf(
-                ProductDetItem(1, R.drawable.white_shirt, "Латекс"),
-                ProductDetItem(2, R.drawable.black_shirt, "Нитрил")
+                ProductDetItem(1, R.drawable.img_22, "Латекс"),
+                ProductDetItem(2, R.drawable.img_22, "Нитрил")
             ),
             material = listOf("Латекс", "Нитрил"),
             variant = listOf(
@@ -224,16 +219,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Medical(
             id = 8,
-            img = R.drawable.img_prod2,
+            img = R.drawable.img_1,
             price = 1500,
             name = "Тонометр",
             count = "2000",
             booked = "100",
             nameShop = "Health store",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_nurce3,
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Автомат"),
-                ProductDetItem(2, R.drawable.white_shirt, "Механический")
+                ProductDetItem(1, R.drawable.img_1, "Автомат"),
+                ProductDetItem(2, R.drawable.img_1, "Механический")
             ),
             material = listOf("Пластик"),
             variant = listOf(
@@ -244,16 +239,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Medical(
             id = 9,
-            img = R.drawable.img_prod2,
+            img = R.drawable.img_2,
             price = 600,
             name = "Шприцы",
             count = "15000",
             booked = "2000",
             nameShop = "Med supply",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_nurce4,
             colors = listOf(
-                ProductDetItem(1, R.drawable.white_shirt, "2ml"),
-                ProductDetItem(2, R.drawable.white_shirt, "5ml")
+                ProductDetItem(1, R.drawable.img_2, "2ml"),
+                ProductDetItem(2, R.drawable.img_2, "5ml")
             ),
             material = listOf("Пластик"),
             variant = listOf(
@@ -264,16 +259,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Medical(
             id = 10,
-            img = R.drawable.img_prod2,
+            img = R.drawable.img_3,
             price = 250,
             name = "Бинты",
             count = "5000",
             booked = "300",
             nameShop = "Med shop",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_nurce1,
             colors = listOf(
-                ProductDetItem(1, R.drawable.white_shirt, "5см"),
-                ProductDetItem(2, R.drawable.white_shirt, "10см")
+                ProductDetItem(1, R.drawable.img_3, "5см"),
+                ProductDetItem(2, R.drawable.img_3, "10см")
             ),
             material = listOf("Марля"),
             variant = listOf(
@@ -283,17 +278,17 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
         ),
         Product.Wood(
             id = 11,
-            img = R.drawable.prod,
+            img = R.drawable.img_4,
             price = 5000,
             name = "Доска строительная",
             count = "1000",
             booked = "120",
             nameShop = "Wood market",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_prof_man2,
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Ель"),
-                ProductDetItem(2, R.drawable.black_shirt, "Сосна"),
-                ProductDetItem(3, R.drawable.black_shirt, "Дуб")
+                ProductDetItem(1, R.drawable.img_4, "Ель"),
+                ProductDetItem(2, R.drawable.img_4, "Сосна"),
+                ProductDetItem(3, R.drawable.img_4, "Дуб")
             ),
             variant = listOf(
                 Variant("2m", 1, 300),
@@ -304,16 +299,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Wood(
             id = 12,
-            img = R.drawable.prod,
+            img = R.drawable.img_5,
             price = 8000,
             name = "Фанера",
             count = "600",
             booked = "50",
             nameShop = "Build store",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_work1,
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Береза"),
-                ProductDetItem(2, R.drawable.black_shirt, "Сосна")
+                ProductDetItem(1, R.drawable.img_5, "Береза"),
+                ProductDetItem(2, R.drawable.img_5, "Сосна")
             ),
             variant = listOf(
                 Variant("10mm", 1, 200),
@@ -323,16 +318,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Wood(
             id = 13,
-            img = R.drawable.prod,
+            img = R.drawable.img_6,
             price = 12000,
             name = "Брус",
             count = "400",
             booked = "60",
             nameShop = "Wood pro",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_work2,
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Дуб"),
-                ProductDetItem(2, R.drawable.black_shirt, "Ель")
+                ProductDetItem(1, R.drawable.img_6, "Дуб"),
+                ProductDetItem(2, R.drawable.img_6, "Ель")
             ),
             variant = listOf(
                 Variant("100x100", 1, 150),
@@ -342,16 +337,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Wood(
             id = 14,
-            img = R.drawable.prod,
+            img = R.drawable.img_7,
             price = 3000,
             name = "ДСП плита",
             count = "900",
             booked = "80",
-            nameShop = "Build market",
-            imgShop = R.drawable.ic_prof1,
+            nameShop = "Tool market",
+            imgShop = R.drawable.ic_work3,
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "ЛДСП"),
-                ProductDetItem(2, R.drawable.black_shirt, "МДФ")
+                ProductDetItem(1, R.drawable.img_7, "ЛДСП"),
+                ProductDetItem(2, R.drawable.img_7, "МДФ")
             ),
             variant = listOf(
                 Variant("8mm", 1, 500),
@@ -361,16 +356,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Wood(
             id = 15,
-            img = R.drawable.prod,
+            img = R.drawable.img_8,
             price = 7000,
             name = "Ламинат",
             count = "1200",
             booked = "200",
             nameShop = "Floor shop",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_work4,
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Дуб светлый"),
-                ProductDetItem(2, R.drawable.black_shirt, "Орех")
+                ProductDetItem(1, R.drawable.img_8, "Дуб светлый"),
+                ProductDetItem(2, R.drawable.img_8, "Орех")
             ),
             variant = listOf(
                 Variant("8mm", 1, 600),
@@ -379,18 +374,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
         ),
         Product.Sport(
             id = 1,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_9,
             price = 1200,
             name = "Спортивная футболка",
             count = "1500",
             booked = "120",
             nameShop = "SportLine",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_prof_woman3,
             sizes = listOf("S", "M", "L"),
             colors = listOf(
                 ProductDetItem(1, R.drawable.red_shirt, "Красный"),
                 ProductDetItem(2, R.drawable.white_shirt, "Белый"),
-                ProductDetItem(3, R.drawable.black_shirt, "Черный")
+                ProductDetItem(3, R.drawable.ic_black, "Черный")
             ),
             variant = listOf(
                 Variant("S", 1, 120),
@@ -401,17 +396,17 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Sport(
             id = 2,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_10,
             price = 2500,
             name = "Беговые кроссовки",
             count = "800",
             booked = "50",
             nameShop = "RunnerPro",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_sport1,
             sizes = listOf("S", "M", "L"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Черный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Белый")
+                ProductDetItem(1, R.drawable.ic_black, "Черный"),
+                ProductDetItem(2, R.drawable.ic_white, "Белый")
             ),
             variant = listOf(
                 Variant("S", 1, 60),
@@ -420,19 +415,20 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
             )
         ),
 
+
         Product.Sport(
             id = 3,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_11,
             price = 900,
             name = "Шорты спортивные",
             count = "2000",
             booked = "300",
             nameShop = "ActiveWear",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_prof_man1,
             sizes = listOf("XL", "2XL", "3XL"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Серый"),
-                ProductDetItem(2, R.drawable.white_shirt, "Синий")
+                ProductDetItem(1, R.drawable.ic_grey, "Серый"),
+                ProductDetItem(2, R.drawable.ic_white, "Белый")
             ),
             variant = listOf(
                 Variant("3Xl", 1, 120),
@@ -443,18 +439,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Sport(
             id = 4,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_12,
             price = 3200,
             name = "Футбольная форма",
             count = "500",
             booked = "40",
             nameShop = "ProFootball",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_prof_man3,
             sizes = listOf("XXS", "XS","S", "M", "L", "XL"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.red_shirt, "Красный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Белый"),
-                ProductDetItem(3, R.drawable.black_shirt, "Черный")
+                ProductDetItem(1, R.drawable.ic_red, "Красный"),
+                ProductDetItem(2, R.drawable.ic_white, "Белый"),
+                ProductDetItem(3, R.drawable.ic_black, "Черный")
             ),
             variant = listOf(
                 Variant("M", 1, 30),
@@ -468,17 +464,17 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Sport(
             id = 5,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_13,
             price = 1800,
             name = "Спортивный костюм",
             count = "1100",
             booked = "90",
             nameShop = "UrbanSport",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_prof_man3,
             sizes = listOf("S", "M", "L"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Черный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Серый")
+                ProductDetItem(1, R.drawable.ic_black, "Черный"),
+                ProductDetItem(2, R.drawable.ic_white, "Серый")
             ),
             variant = listOf(
                 Variant("S", 1, 100),
@@ -489,7 +485,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Sport(
             id = 6,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_14,
             price = 4000,
             name = "Футбольные бутсы",
             count = "600",
@@ -498,8 +494,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
             imgShop = R.drawable.ic_prof1,
             sizes = listOf("S", "M", "L"),
             colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Черный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Красный")
+                ProductDetItem(1, R.drawable.ic_black, "Черный"),
+                ProductDetItem(2, R.drawable.ic_red, "Красный")
             ),
             variant = listOf(
                 Variant("S", 1, 40),
@@ -507,41 +503,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
                 Variant("L", 2, 80)
             )
         ),
-
-        Product.Sport(
-            id = 7,
-            img = R.drawable.ic_prof1,
-            price = 1500,
-            name = "Толстовка",
-            count = "1300",
-            booked = "110",
-            nameShop = "StreetSport",
-            imgShop = R.drawable.ic_prof1,
-            sizes = listOf("S", "M", "L"),
-            colors = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Черный"),
-                ProductDetItem(2, R.drawable.white_shirt, "Синий"),
-                ProductDetItem(3, R.drawable.white_shirt, "Белый")
-            ),
-            variant = listOf(
-                Variant("S", 1, 100),
-                Variant("M", 2, 150),
-                Variant("L", 3, 200),
-                Variant("L", 1, 200),
-            )
-        ),
         Product.Accessories(
             id = 101,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_15,
             price = 800,
             name = "Солнцезащитные очки",
             count = "3000",
             booked = "200",
             nameShop = "StyleGlass",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_woman5,
             material = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Пластик"),
-                ProductDetItem(2, R.drawable.black_shirt, "Металл")
+                ProductDetItem(1, R.drawable.img_15, "Пластик"),
+                ProductDetItem(2, R.drawable.img_15, "Металл")
             ),
             variant = listOf(
                 Variant("Пластик", 1, 500),
@@ -551,16 +524,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Accessories(
             id = 102,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_16,
             price = 2500,
             name = "Цепочка",
             count = "1200",
             booked = "80",
             nameShop = "GoldSilver",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_woman6,
             material = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Золото"),
-                ProductDetItem(2, R.drawable.black_shirt, "Серебро")
+                ProductDetItem(1, R.drawable.img_16, "Золото"),
+                ProductDetItem(2, R.drawable.img_16, "Серебро")
             ),
             variant = listOf(
                 Variant("Золото", 1, 120),
@@ -570,16 +543,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Accessories(
             id = 103,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_17,
             price = 600,
             name = "Браслет",
             count = "4000",
             booked = "300",
-            nameShop = "HandMade",
-            imgShop = R.drawable.ic_prof1,
+            nameShop = "Coral",
+            imgShop = R.drawable.ic_woman7,
             material = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Кожа"),
-                ProductDetItem(2, R.drawable.black_shirt, "Металл")
+                ProductDetItem(1, R.drawable.img_17, "Кожа"),
+                ProductDetItem(2, R.drawable.img_17, "Металл")
             ),
             variant = listOf(
                 Variant("Кожа", 1, 600),
@@ -589,16 +562,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Accessories(
             id = 104,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_18,
             price = 1500,
             name = "Часы",
             count = "900",
             booked = "60",
             nameShop = "TimePro",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_woman8,
             material = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Металл"),
-                ProductDetItem(2, R.drawable.black_shirt, "Кожа")
+                ProductDetItem(1, R.drawable.img_18, "Металл"),
+                ProductDetItem(2, R.drawable.img_18, "Кожа")
             ),
             variant = listOf(
                 Variant("Металл", 1, 300),
@@ -608,16 +581,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Accessories(
             id = 105,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_19,
             price = 300,
             name = "Кольцо",
             count = "5000",
             booked = "700",
-            nameShop = "RingShop",
-            imgShop = R.drawable.ic_prof1,
+            nameShop = "Coral",
+            imgShop = R.drawable.ic_woman7,
             material = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Серебро"),
-                ProductDetItem(2, R.drawable.black_shirt, "Золото")
+                ProductDetItem(1, R.drawable.img_19, "Серебро"),
+                ProductDetItem(2, R.drawable.img_19, "Золото")
             ),
             variant = listOf(
                 Variant("Серебро", 1, 900),
@@ -627,17 +600,17 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Accessories(
             id = 106,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_20,
             price = 700,
             name = "Серьги",
             count = "3500",
             booked = "250",
-            nameShop = "JewelryPro",
-            imgShop = R.drawable.ic_prof1,
+            nameShop = "Coral",
+            imgShop = R.drawable.ic_woman7,
             material = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Серебро"),
-                ProductDetItem(2, R.drawable.black_shirt, "Золото"),
-                ProductDetItem(3, R.drawable.black_shirt, "Пластик")
+                ProductDetItem(1, R.drawable.img_20, "Серебро"),
+                ProductDetItem(2, R.drawable.img_20, "Золото"),
+                ProductDetItem(3, R.drawable.img_20, "Пластик")
             ),
             variant = listOf(
                 Variant("Серебро", 1, 500),
@@ -648,16 +621,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
         Product.Accessories(
             id = 107,
-            img = R.drawable.ic_prof1,
+            img = R.drawable.img_21,
             price = 1100,
             name = "Пояс",
             count = "2000",
             booked = "150",
             nameShop = "LeatherStyle",
-            imgShop = R.drawable.ic_prof1,
+            imgShop = R.drawable.ic_woman9,
             material = listOf(
-                ProductDetItem(1, R.drawable.black_shirt, "Кожа"),
-                ProductDetItem(2, R.drawable.black_shirt, "Ткань")
+                ProductDetItem(1, R.drawable.img_21, "Кожа"),
+                ProductDetItem(2, R.drawable.img_21, "Ткань")
             ),
             variant = listOf(
                 Variant("Кожа", 1, 700),

@@ -22,5 +22,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
                 1 -> tab.text = "Заказы"
             }
         }.attach()
+
+
     }
 }
